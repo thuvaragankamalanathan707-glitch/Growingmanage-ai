@@ -1,0 +1,382 @@
+index.html 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GrowManage AI - Personal Finance</title>
+
+<meta name="description" content="AI powered personal finance tools for budgeting, saving and expense tracking.">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>GrowManage AI</h1>
+    <p>Track Money. Save Smarter. Grow Faster with AI.</p>
+</header>
+
+
+<nav>
+<a href="#home">Home</a>
+<a href="#features">Features</a>
+<a href="#tools">Tools</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#pricing">Pricing</a>
+</nav>
+
+
+<section id="home">
+
+<h2>Where Does Your Money Go?</h2>
+
+<p>
+Manage your expenses, create smart budgets,
+and improve your financial habits using AI.
+</p>
+
+<button onclick="budget()">Calculate Budget</button>
+
+<button onclick="saving()">Savings Planner</button>
+
+<button onclick="expense()">Track Expenses</button>
+
+</section>
+
+
+
+<section id="features">
+
+<h2>Why GrowManage AI?</h2>
+
+<div class="cards">
+
+<div>
+<h3>🔒 Secure</h3>
+<p>Your financial data stays protected.</p>
+</div>
+
+
+<div>
+<h3>🤖 AI Powered</h3>
+<p>Smart money suggestions using AI.</p>
+</div>
+
+
+<div>
+<h3>📱 Beginner Friendly</h3>
+<p>Simple tools for everyone.</p>
+</div>
+
+
+<div>
+<h3>📊 Smart Reports</h3>
+<p>Understand your spending habits.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="tools">
+
+<h2>Finance Tools</h2>
+
+<div class="tool-box">
+
+<h3>Budget Calculator</h3>
+
+<input id="income" placeholder="Monthly Income">
+
+<input id="cost" placeholder="Monthly Expenses">
+
+<button onclick="calculate()">
+Analyze
+</button>
+
+<p id="result"></p>
+
+
+</div>
+
+</section>
+
+
+
+<section id="dashboard">
+
+<h2>Your AI Dashboard</h2>
+
+<p>
+Income: Rs. 0
+</p>
+
+<p>
+Expenses: Rs. 0
+</p>
+
+<p>
+Savings Goal: Start Planning
+</p>
+
+</section>
+
+
+
+<section id="pricing">
+
+<h2>Pricing</h2>
+
+<div class="price">
+
+<h3>Free Plan</h3>
+
+<p>
+Basic budgeting tools
+</p>
+
+
+<h3>Premium AI Plan</h3>
+
+<p>
+Advanced AI financial assistant
+</p>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+<p>
+© 2026 GrowManage AI
+</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+  </html>
+
+style.css
+body{
+
+font-family: Arial, sans-serif;
+
+margin:0;
+
+background:#f5f7fb;
+
+color:#222;
+
+}
+
+
+header{
+
+background:#0f766e;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+
+nav{
+
+background:#111827;
+
+padding:15px;
+
+text-align:center;
+
+}
+
+
+nav a{
+
+color:white;
+
+margin:15px;
+
+text-decoration:none;
+
+}
+
+
+section{
+
+padding:40px;
+
+text-align:center;
+
+}
+
+
+button{
+
+background:#0f766e;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+margin:10px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+
+button:hover{
+
+background:#115e59;
+
+}
+
+
+.cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+.cards div{
+
+background:white;
+
+padding:20px;
+
+border-radius:15px;
+
+width:200px;
+
+box-shadow:0 5px 15px #ddd;
+
+}
+
+
+.tool-box{
+
+background:white;
+
+padding:30px;
+
+max-width:400px;
+
+margin:auto;
+
+border-radius:15px;
+
+}
+
+
+input{
+
+display:block;
+
+width:90%;
+
+padding:12px;
+
+margin:10px auto;
+
+}
+
+
+.price{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+}
+
+
+footer{
+
+background:#111827;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+}script.js
+function budget(){
+
+alert(
+"AI Budget Calculator Started"
+);
+
+}
+
+
+function saving(){
+
+alert(
+"Create your savings goal with AI"
+);
+
+}
+
+
+function expense(){
+
+alert(
+"Expense Tracker Opened"
+);
+
+}
+
+
+
+function calculate(){
+
+let income =
+Number(document.getElementById("income").value);
+
+
+let cost =
+Number(document.getElementById("cost").value);
+
+
+
+let save = income - cost;
+
+
+document.getElementById("result").innerHTML =
+
+"Recommended Savings: Rs. " + save;
+
+}
